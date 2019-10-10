@@ -1,0 +1,27 @@
+# rofi.theme: ~/.cache/wal/colors-rofi-light.rasi
+# rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+# ! ------------------------------------------------------------------------------
+# !                      ROFI Settings
+# ! ------------------------------------------------------------------------------
+# ! General
+# rofi.font:                DejaVu Sans Mono 9
+# rofi.fake-transparency:   true
+rofi.hide-scrollbar:      true
+# rofi.bw: 2
+
+# ! Layout
+rofi.width:              20
+rofi.column:             4
+# rofi.location:           0
+rofi.lines:              6
+rofi.padding:            10
+# rofi.sidebar-mode:       true
+# rofi.fullscreen:         true
+
+rofi.color-enabled: true
+rofi.color-window: argb:880d0d0d, argb:88000000, argb:00000000
+# rofi.color-normal: argb:002f343f, #FAFAFA, argb:002f343f, argb:33E95378, #FAFAFA
+rofi.color-normal: argb:002f343f, #FAFAFA, argb:002f343f, argb:99ffa600, #FAFAFA
+rofi.color-active: #2f343f, #b48ead, #2f343f, #2f343f, #93e5cc
+rofi.color-urgent: #2f343f, #ebcb8b, #2f343f, #2f343f, #ebcb8b
+rofi.hide-scrollbar:      true

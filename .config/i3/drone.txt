@@ -1,0 +1,6 @@
+wireless charge 
+raspberry pi wireless charge station
+gps coordinates, drone automatically lands to charge
+
+facial recognition
+methane sniffer https://uk.banggood.com/9Pcs-MQ2-MQ-3-MQ-4-MQ-5-MQ-6-MQ-7-MQ-8-MQ-9-MQ-135-Gas-Sensor-Module-For-Arduino-p-1005800.html?gmcCountry=IE&currency=EUR&createTmp=1&utm_source=googleshopping&utm_medium=cpc_bgcs&utm_content=garman&utm_campaign=pla-ieg-ele-diy2-pc&ad_id=337459762783&gclid=Cj0KCQjwo7foBRD8ARIsAHTy2wlVSwja62wTNUeUogoiTWgU56hBp_DV-En2xsnVHn50xaD7DhmNnF4aAkSpEALw_wcB&cur_warehouse=CN
