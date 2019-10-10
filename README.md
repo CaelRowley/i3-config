@@ -1,7 +1,7 @@
 
 useful series before ricing: https://www.youtube.com/watch?v=j1I63wGcvU4   
 
-yay AUR helper: https://www.ostechnix.com/yay-found-yet-another-reliable-aur-helper/   
+yay: https://www.ostechnix.com/yay-found-yet-another-reliable-aur-helper/   
 
 packages: (pacman -S package  / yay -S package)
 ```
@@ -17,11 +17,14 @@ redshift
 yay -S compton-tryone-git
 pacman -S flameshot
 pavucontrol
-xorg-xprop
 lxappearance
 pavucontrol
 nautilus 
 gotop
+
+xorg-xmodmap
+xorg-xprop
+xorg-setxkbmap
 ```
 
 to init setup: https://wiki.archlinux.org/index.php/Xinit   
@@ -29,17 +32,18 @@ to init setup: https://wiki.archlinux.org/index.php/Xinit
 https://wiki.archlinux.org/index.php/x_resources   
 ~/.Xresources   
 
+
 gaps: https://gist.github.com/boreycutts/6417980039760d9d9dac0dd2148d4783   
 
 compton: https://www.youtube.com/watch?v=5GpyaSEe0VY   
 
 flashfocus: https://github.com/fennerm/flashfocus   
 
-export PATH=$PATH:$HOME/.local/bin   
+export PATH=$PATH:$HOME/.local/bin
 
 gotop: https://github.com/cjbassi/gotop   
 
-unclutter: https://wiki.archlinux.org/index.php/Unclutter     
+unclutter: https://wiki.archlinux.org/index.php/Unclutter   
 
 https://github.com/FortAwesome/Font-Awesome/releases   
 .tff files into ~/.fonts   
@@ -47,8 +51,7 @@ https://github.com/FortAwesome/Font-Awesome/releases
 https://fontawesome.com/cheatsheet?from=io   
 
 
-network   
-https://wiki.archlinux.org/index.php/Netctl   
+network: https://wiki.archlinux.org/index.php/Netctl   
 wifi-menu   
 
 ```
@@ -68,11 +71,11 @@ netctl enable profile
 netctl reenable profile
 ```
 
-To see dependants   
-pacman -Qi package 
+To see dependants:   
+pacman -Qi package    
 
-All packages   
+All packages:   
 pacman -Q   
 
-All AUR packages      
+All AUR packages:   
 pacman -Qm   
