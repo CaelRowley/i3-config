@@ -21,6 +21,8 @@ lxappearance
 pavucontrol
 nautilus 
 gotop
+polybar
+unclutter
 
 xorg-xmodmap
 xorg-xprop
@@ -42,6 +44,8 @@ flashfocus: https://github.com/fennerm/flashfocus
 export PATH=$PATH:$HOME/.local/bin
 
 gotop: https://github.com/cjbassi/gotop   
+
+polybar: https://www.youtube.com/watch?v=7RNgpvBMua0   
 
 unclutter: https://wiki.archlinux.org/index.php/Unclutter   
 
