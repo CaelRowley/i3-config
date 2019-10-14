@@ -35,6 +35,13 @@ set $workspace10 "10"
 # assign [class="use xprop"] $workspace
 for_window [class="Spotify"] move window to workspace $workspace10
 
+# For popups
+for_window [window_role="pop-up"]                       floating enable
+for_window [window_role="bubble"]                       floating enable 
+for_window [window_role="task_dialog"]                  floating enable
+for_window [window_role="Preferences"]                  floating enable
+for_window [window_type="dialog"]                       floating enable 
+for_window [window_type="menu"]                         floating enable
 
 #######################
 #       I3_KEYS       # 
@@ -130,9 +137,9 @@ bindsym $mod+shift+l exec "$HOME/.config/i3/sleep.sh"
 bindsym Mod1+Tab workspace back_and_forth
 
 # Audio controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% & pactl set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% & pactl set-sink-volume 1 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle & pactl set-sink-mute 1 toggle
 
 # Screen brightness
 bindsym XF86MonBrightnessUp exec "xbacklight + 20"
@@ -190,7 +197,7 @@ bindsym $mod+Return exec termite
 ######################
 #       STARTUP      #
 ######################
-exec --no-startup-id redshift -l 52.47:13.42
+exec --no-startup-id redshift -l 52.47:13.42 -t 6500K:5500K
 exec --no-startup-id xrandr --output eDP1 --mode 2560x1440 
 
 exec "$HOME/.config/i3/kb-us.sh"

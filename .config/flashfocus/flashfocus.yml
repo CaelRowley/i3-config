@@ -54,9 +54,9 @@ rules:
   - window-class: Org.gnome.Nautilus
     flash-opacity: 1
     default-opacity: 0.90
-  - window-class: code-oss
-    flash-opacity: 1
-    default-opacity: 0.95
+  # - window-class: code-oss
+  #   flash-opacity: 1
+  #   default-opacity: 0.95
     
 #
 # I also would prefer that firefox windows are not flashed on focus:
