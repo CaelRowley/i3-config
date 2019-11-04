@@ -53,7 +53,7 @@ rules:
     default-opacity: 0.90
   - window-class: Org.gnome.Nautilus
     flash-opacity: 1
-    default-opacity: 0.90
+    default-opacity: 0.85
   # - window-class: code-oss
   #   flash-opacity: 1
   #   default-opacity: 0.95

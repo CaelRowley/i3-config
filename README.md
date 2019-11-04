@@ -75,6 +75,11 @@ netctl enable profile
 netctl reenable profile
 ```
 
+Themes:   
+https://github.com/arc-design/arc-theme    
+https://github.com/NicoHood/arc-icon-theme   
+https://github.com/chaouimar1/arc-orange-icon-theme   
+
 To see dependants:   
 pacman -Qi package    
 

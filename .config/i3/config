@@ -150,9 +150,9 @@ bindsym $mod+Ctrl+1 exec "$HOME/.config/i3/kb-gb.sh"
 bindsym $mod+Ctrl+2 exec "$HOME/.config/i3/kb-us.sh"
 
 # Monitor layout
-bindsym $mod+Ctrl+8 exec --no-startup-id xrandr --output DP1 --off --output DP2 --off --output eDP1 --mode 3840x2160 
-bindsym $mod+Ctrl+9 exec --no-startup-id xrandr --output eDP1 --off --output DP2 --auto --output DP1 --auto
-bindsym $mod+Ctrl+0 exec --no-startup-id xrandr --output DP1 --off --output DP2  --off --output eDP1 --mode 2560x1440 
+bindsym $mod+Ctrl+8 exec --no-startup-id xrandr --output DP1 --off --output DP2 --off --output eDP1 --mode 3840x2160 && feh --bg-scale /home/cael/Pictures/Wallpaper/*.*
+bindsym $mod+Ctrl+9 exec --no-startup-id xrandr --output eDP1 --off --output DP2 --auto --output DP1 --auto && feh --bg-scale /home/cael/Pictures/Wallpaper/*.*
+bindsym $mod+Ctrl+0 exec --no-startup-id xrandr --output DP1 --off --output DP2  --off --output eDP1 --mode 2560x1440 && feh --bg-scale /home/cael/Pictures/Wallpaper/*.*
 
 #####################
 #       APPS        # 
