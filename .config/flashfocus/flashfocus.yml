@@ -32,7 +32,7 @@ flash-on-focus: true
 #      another window was just closed. 
 #   'on_switch':
 #      Lone windows will be flashed only upon switching desktops.
-flash-lone-windows: 'always'
+flash-lone-windows: 'never'
 
 # Defining window-specific flash rules
 #
@@ -54,9 +54,12 @@ rules:
   - window-class: Org.gnome.Nautilus
     flash-opacity: 1
     default-opacity: 0.85
-  # - window-class: code-oss
-  #   flash-opacity: 1
-  #   default-opacity: 0.95
+  - window-class: Deluge
+    flash-opacity: 1
+    default-opacity: 0.85
+  - window-class: code-oss
+    flash-opacity: 0.9
+    default-opacity: 1
     
 #
 # I also would prefer that firefox windows are not flashed on focus:

@@ -23,6 +23,7 @@ nautilus
 gotop
 polybar
 unclutter
+solaar
 
 xorg-xmodmap
 xorg-xprop
@@ -88,3 +89,7 @@ pacman -Q
 
 All AUR packages:   
 pacman -Qm   
+
+/usr/share/icons/Adwaita/cursors
+rm watch
+cp left_ptr watch

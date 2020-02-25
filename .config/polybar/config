@@ -228,6 +228,7 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
+click-right = exec pavucontrol &
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL %percentage%%

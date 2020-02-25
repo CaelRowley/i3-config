@@ -43,6 +43,20 @@ for_window [window_role="Preferences"]                  floating enable
 for_window [window_type="dialog"]                       floating enable 
 for_window [window_type="menu"]                         floating enable
 
+# https://github.com/ValveSoftware/steam-for-linux/issues/1040
+for_window [class="^Steam$" title="^Friends$"] floating enable
+for_window [class="^Steam$" title="Steam - News"] floating enable
+for_window [class="^Steam$" title="Steam - News (1 of 2)"] floating enable
+for_window [class="^Steam$" title="Steam - News (1 of 3)"] floating enable
+for_window [class="^Steam$" title=".* - Chat"] floating enable
+for_window [class="^Steam$" title="^Settings$"] floating enable
+for_window [class="^Steam$" title=".* - event started"] floating enable
+for_window [class="^Steam$" title=".* CD key"] floating enable
+for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
+for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
+for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
+for_window [title="^Steam Keyboard$"] floating enable
+
 #######################
 #       I3_KEYS       # 
 #######################
@@ -105,7 +119,7 @@ bindsym $mod+6 workspace $workspace6
 bindsym $mod+7 workspace $workspace7
 bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
-bindsym $mod+0 workspace $workspace10; exec [ $(ps h -C spotify | wc -l) = 0 ] && spotify && flash_window
+bindsym $mod+0 workspace $workspace10; exec [ $(ps h -C spotify | wc -l) = 0 ] && spotify
 
 # move focused container to workspace
 bindsym $mod+$altMod+1 move container to workspace $workspace1
@@ -119,8 +133,8 @@ bindsym $mod+$altMod+8 move container to workspace $workspace8
 bindsym $mod+$altMod+9 move container to workspace $workspace9
 bindsym $mod+$altMod+0 move container to workspace $workspace10
 
-bindsym Ctrl+Left workspace prev
-bindsym Ctrl+Right workspace next
+# bindsym Ctrl+Left workspace prev
+# bindsym Ctrl+Right workspace next
 
 bindsym Ctrl+Shift+Left move container to workspace prev
 bindsym Ctrl+Shift+Right move container to workspace next
@@ -137,28 +151,35 @@ bindsym $mod+shift+l exec "$HOME/.config/i3/sleep.sh"
 bindsym Mod1+Tab workspace back_and_forth
 
 # Audio controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% & pactl set-sink-volume 1 +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% & pactl set-sink-volume 1 -5%
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle & pactl set-sink-mute 1 toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% & pactl set-sink-volume 1 +5% & pactl set-sink-volume 6 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% & pactl set-sink-volume 1 -5% & pactl set-sink-volume 6 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle & pactl set-sink-mute 1 toggle & pactl set-sink-mute 6 toggle
 
 # Screen brightness
-bindsym XF86MonBrightnessUp exec "xbacklight + 20"
-bindsym XF86MonBrightnessDown exec "xbacklight - 20"
+bindsym XF86MonBrightnessUp exec "xbacklight + 10"
+bindsym XF86MonBrightnessDown exec "xbacklight - 10"
+bindsym XF86MonBrightnessUp+shift  exec "xbacklight + 1"
+bindsym XF86MonBrightnessDown+shift exec "xbacklight - 1"
 
 # Keyboard layout
 bindsym $mod+Ctrl+1 exec "$HOME/.config/i3/kb-gb.sh"
 bindsym $mod+Ctrl+2 exec "$HOME/.config/i3/kb-us.sh"
 
-# Monitor layout
-bindsym $mod+Ctrl+8 exec --no-startup-id xrandr --output DP1 --off --output DP2 --off --output eDP1 --mode 3840x2160 && feh --bg-scale /home/cael/Pictures/Wallpaper/*.*
-bindsym $mod+Ctrl+9 exec --no-startup-id xrandr --output eDP1 --off --output DP2 --auto --output DP1 --auto && feh --bg-scale /home/cael/Pictures/Wallpaper/*.*
-bindsym $mod+Ctrl+0 exec --no-startup-id xrandr --output DP1 --off --output DP2  --off --output eDP1 --mode 2560x1440 && feh --bg-scale /home/cael/Pictures/Wallpaper/*.*
+# 4k Laptop
+bindsym $mod+Ctrl+7 exec --no-startup-id xrandr --output VIRTUAL1 --off --output DP1 --off --output DP2 --off --output eDP1 --mode 3840x2160 && feh --bg-scale /home/cael/Pictures/Wallpaper/*.* && exec "$HOME/.config/i3/startup.sh"
+#  All
+bindsym $mod+Ctrl+8 exec --no-startup-id xrandr --output DP1 --mode 1920x1080 --output DP2 --mode 1920x1080 eDP1 --mode 1920x1080 --output VIRTUAL1 --mode 1920x1080 && feh --bg-scale /home/cael/Pictures/Wallpaper/*.* && exec "$HOME/.config/i3/startup.sh"
+# Monitor
+bindsym $mod+Ctrl+9 exec --no-startup-id xrandr --output eDP1 --off --output DP2 --auto --output DP1 --auto --output VIRTUAL1 --auto && feh --bg-scale /home/cael/Pictures/Wallpaper/*.* && exec "$HOME/.config/i3/startup.sh"
+# Laptop
+bindsym $mod+Ctrl+0 exec --no-startup-id xrandr --output VIRTUAL1 --off --output DP1 --off --output DP2  --off --output eDP1 --mode 2560x1440 && feh --bg-scale /home/cael/Pictures/Wallpaper/*.* && exec "$HOME/.config/i3/startup.sh"
 
 #####################
 #       APPS        # 
 #####################
 
 bindsym $mod+space exec --no-startup-id "rofi -combi-modi run,drun -show combi -modi combi -display-combi 'search'"
+bindsym $mod+tab exec --no-startup-id "rofi -combi-modi run,drun -show combi -modi combi -display-combi 'search'"
 
 bindsym $mod+p exec flameshot gui -p ~/Pictures/Captures
 
@@ -197,7 +218,7 @@ bindsym $mod+Return exec termite
 ######################
 #       STARTUP      #
 ######################
-exec --no-startup-id redshift -l 52.47:13.42 -t 6500K:5500K
+# exec --no-startup-id redshift -l 52.47:13.42 -t 6500K:5500K
 exec --no-startup-id xrandr --output eDP1 --mode 2560x1440 
 
 exec "$HOME/.config/i3/kb-us.sh"
@@ -206,3 +227,6 @@ exec "$HOME/.config/i3/kb-us.sh"
 exec spotify
 
 exec_always "$HOME/.config/i3/startup.sh"
+
+
+

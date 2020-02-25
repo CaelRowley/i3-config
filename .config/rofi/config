@@ -14,7 +14,7 @@ rofi.width:              20
 rofi.column:             4
 # rofi.location:           0
 rofi.lines:              6
-rofi.padding:            10
+rofi.padding:            20
 # rofi.sidebar-mode:       true
 # rofi.fullscreen:         true
 
